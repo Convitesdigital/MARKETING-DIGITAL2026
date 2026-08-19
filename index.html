@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acelere Seus Resultados no Digital - Edmilson E. Zandamela</title>
+    
+    
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1088369860428273');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1088369860428273&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+    <script>
+  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+  const link = 'https://convitesdigital.github.io/OFERTA-DO-DIA/';
+
+  function setBackRedirect(url) {
+    let urlBackRedirect = url;
+    urlBackRedirect = urlBackRedirect =
+      urlBackRedirect.trim() +
+      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.addEventListener('popstate', () => {
+      console.log('onpopstate', urlBackRedirect);
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    });
+  }
+
+  setBackRedirect(link);
+</script>
+    
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --accent: #f59e0b;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        /* Top Banner & Timer */
+        .top-banner {
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            color: #000;
+            text-align: center;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .timer-box {
+            background: var(--dark);
+            color: var(--light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            margin-bottom: 20px;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p.subheadline {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* CTA Button com Efeito de Vibração/Pulso */
+        @keyframes vibrate {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--success);
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            animation: vibrate 2s infinite ease-in-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .cta-button:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.6);
+            animation: none;
+        }
+
+        /* Formador Section */
+        .instructor-section {
+            background: #1e293b;
+            padding: 50px 20px;
+            margin: 40px 0;
+            border-top: 1px solid #334155;
+            border-bottom: 1px solid #334155;
+        }
+
+        .instructor-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        @media(min-width: 768px) {
+            .instructor-container {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        .instructor-img-placeholder {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: #334155;
+            border: 4px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            text-align: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .instructor-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instructor-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .instructor-info p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Bonus Section */
+        .bonus-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .bonus-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .bonus-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 25px;
+            border-radius: 12px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .bonus-tag {
+            background: var(--accent);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .bonus-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .bonus-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Social Proof Pop-up */
+        .social-proof-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 900;
+            background: #1e293b;
+            border-left: 5px solid var(--success);
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            pointer-events: none;
+            max-width: 320px;
+        }
+
+        .social-proof-popup.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .sp-icon { font-size: 1.5rem; }
+        .sp-text { font-size: 0.85rem; color: #e2e8f0; }
+        .sp-text strong { color: var(--accent); }
+
+        @media(max-width: 600px) {
+            .social-proof-popup { bottom: 80px; }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #090d16;
+            color: var(--gray);
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        <span>⚡ ATENÇÃO: OFERTA ESPECIAL EXPIRA EM:</span>
+        <div class="timer-box" id="countdown">59:00</div>
+    </div>
+
+    <header class="hero">
+        <h1>Domine o Tráfego Pago e Escale Seu Negócio Digital com <span>Máxima Lucratividade</span></h1>
+        <p class="subheadline">Descubra o método validado para atrair clientes qualificados todos os dias, estruturar operações altamente lucrativas e transformar seu conhecimento em uma máquina de vendas previsível — mesmo começando do absoluto zero.</p>
+        <a href="https://convitesdigital.github.io/COMPREENDEDORISMO-DIGITAL2026/" class="cta-button">QUERO GARANTIR MEU ACESSO AGORA</a>
+    </header>
+
+    <section class="instructor-section">
+        <div class="instructor-container">
+            <div class="instructor-img-placeholder">
+                <img src="PERFIL.jpg" alt="Edmilson E. Zandamela">
+            
+            </div>
+            <div class="instructor-info">
+                <h3>Quem será seu mentor: Edmilson E. Zandamela</h3>
+                <p>Formado em Eng. Informática, Marketing e Gestão de Tráfego Pago,  EMPREENDEDOR NO DIGITAL, com diversos infoprodutos vendidos em MOÇAMBIQUE, BRASIL, PORTUGAL, ESTADOS UNIDOS E ANGOLA, Com anos de experiência prática no campo de batalha digital, Edmilson já ajudei centenas de empreendedores a estruturarem negócios sólidos, escaláveis e altamente lucrativos na internet através de métodos diretos e comprovados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bonus-section">
+        <h2>O Que Você Leva Hoje (Bônus Exclusivos)</h2>
+        <div class="bonus-grid">
+            <div class="bonus-card">
+                <span class="bonus-tag">Bônus Principal</span>
+                <h4>Aulas de Marketing e Gestão de Tráfego Pago</h4>
+                <p>Aprenda a investir em anúncios que geram retorno real. Passo a passo prático para campanhas de alta performance.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem; color: var(--accent);">Formador: Edmilson E. Zandamela</p>
+            </div>
+            <div class="bonus-card">
+                <span class="bonus-tag">Bônus 02</span>
+                <h4>Ebook sobre Marketing Digital</h4>
+                <p>Estratégias avançadas para posicionar sua marca e atrair clientes qualificados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem; color: var(--accent);">Autor: Edmilson E. Zandamela</p>
+            </div>
+            <div class="bonus-card">
+                <span class="bonus-tag">Bônus 03</span>
+                <h4>Ebook sobre Empreendedorismo Digital</h4>
+                <p>Mentalidade, gestão e estrutura essencial para construir um negócio sólido na internet.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem; color: var(--accent);">Autor: Edmilson E. Zandamela</p>
+            </div>
+            <div class="bonus-card">
+                <span class="bonus-tag">Bônus 04</span>
+                <h4>Ebook: + de 700 Ideias de Negócios</h4>
+                <p>Um catálogo completo com centenas de oportunidades validadas para você começar a faturar.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;" id="checkout">
+            <a href="https://convitesdigital.github.io/COMPREENDEDORISMO-DIGITAL2026/" class="cta-button">QUERO GARANTIR MEU ACESSO COM OS BÔNUS</a>
+        </div>
+    </section>
+
+    <div id="socialProofPopup" class="social-proof-popup">
+        <div class="sp-icon">🔥</div>
+        <div class="sp-text" id="spText">Carregando notificação...</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Edmilson E. Zandamela. Todos os direitos reservados. Este site não é afiliado ao Facebook ou Google.</p>
+    </footer>
+
+    <script>
+        let totalSeconds = 59 * 60;
+        const timerDisplay = document.getElementById('countdown');
+
+        function updateTimer() {
+            let minutes = Math.floor(totalSeconds / 60);
+            let seconds = totalSeconds % 60;
+            timerDisplay.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            if (totalSeconds > 0) totalSeconds--;
+            else totalSeconds = 59 * 60;
+        }
+        setInterval(updateTimer, 1000);
+
+        const notifications = [
+            "<strong>João de Maputo</strong> acabou de ter acesso: <em>'Simplesmente incríveis, mudou minha visão!'</em>",
+            "<strong>Carla da Beira</strong> garantiu o combo: <em>'O ebook de ideias abriu minha mente.'</em>",
+            "<strong>Miguel de Nampula</strong> acabou de entrar: <em>'Melhor investimento em tráfego pago.'</em>",
+            "<strong>Ana de Inhambane</strong> garantiu os bônus: <em>'A didática do Edmilson é fantástica.'</em>",
+            "<strong>Nelson de Maputo</strong> acabou de se inscrever: <em>'Conteúdo de altíssimo nível!'</em>",
+            "<strong>Helena de Quelimane</strong> garantiu o acesso: <em>'Finalmente entendi como estruturar anúncios.'</em>",
+            "<strong>Rui de Tete</strong> acabou de adquirir: <em>'As aulas valem 10x o preço.'</em>",
+            "<strong>Sofia de Chimoio</strong> garantiu o kit: <em>'Ebooks super práticos e fáceis de aplicar.'</em>",
+            "<strong>Paulo de Xai-Xai</strong> acabou de ter acesso: <em>'Conteúdo incrível, já apliquei hoje.'</em>",
+            "<strong>Lucia de Pemba</strong> garantiu sua vaga: <em>'Suporte e material impecáveis.'</em>",
+            "<strong>Carlos de Maputo</strong> acabou de entrar: <em>'Aulas muito práticas!'</em>",
+            "<strong>Beatriz de Manica</strong> garantiu os bônus: <em>'O guia de 700 ideias é uma mina de ouro.'</em>",
+            "<strong>Dário de Lichinga</strong> acabou de adquirir: <em>'Estava perdido e agora tenho um norte claro.'</em>",
+            "<strong>Sandra de Inhambane</strong> garantiu o acesso: <em>'Aprendi mais aqui do que em cursos caros.'</em>",
+            "<strong>Bruno de Matola</strong> acabou de entrar: <em>'Conteúdo direto ao ponto.'</em>",
+            "<strong>Fatima de Nacala</strong> garantiu sua vaga: <em>'Simplesmente amei o ebook.'</em>",
+            "<strong>Armando de Maputo</strong> acabou de adquirir: <em>'Estratégias que realmente funcionam.'</em>",
+            "<strong>Cláudia de Gaza</strong> garantiu o combo: <em>'Conteúdo nota 10!'</em>",
+            "<strong>Valter de Sofala</strong> acabou de ter acesso: <em>'Aulas fantásticas.'</em>",
+            "<strong>Zulmira de Maputo</strong> garantiu os bônus: <em>'Impressionada com a qualidade!'</em>"
+        ];
+
+        const popup = document.getElementById('socialProofPopup');
+        const spText = document.getElementById('spText');
+
+        function showRandomNotification() {
+            const randomIndex = Math.floor(Math.random() * notifications.length);
+            spText.innerHTML = notifications[randomIndex];
+            popup.classList.add('show');
+            setTimeout(() => { popup.classList.remove('show'); }, 5000);
+        }
+
+        setTimeout(() => {
+            showRandomNotification();
+            setInterval(showRandomNotification, 12000);
+        }, 4000);
+    </script>
+</body>
+</html>
